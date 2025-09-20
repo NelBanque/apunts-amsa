@@ -1,5 +1,5 @@
-# AMSA - Nel Banqué Torné - Setmana 1 
-La feina de l’administrador de sistemes
+# AMSA - Setmana 1: La feina de l’administrador de sistemes
+**Nom:** Nel Banqué Torné
 
 ## Resum teòric
 Els administradors de sistemes són persones amb coneixement tècnic que s’anticipen o resolen problemes sota pressió. Han de tenir la capacitat d'enfrontar-se a qualsevol problema que pugui succeir.

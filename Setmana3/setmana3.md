@@ -15,11 +15,11 @@ GRUB (GRand Unified Bootloader) és un gestor d’arrencada. La seva funció pri
 L’execució del GRUB comença amb un codi inicial molt petit (Stage 1) al MBR/VBR o com a fitxer EFI, pot incloure un pas opcional (Stage 1.5) amb suport bàsic de sistemes de fitxers, i finalitza amb el GRUB complet (Stage 2), que mostra el menú d’arrencada, carrega mòduls addicionals i passa el control al kernel.
 
 ### Configuració del GRUB
-- Fitxer principal de configuració: `/boot/grub/grub.cfg` (o `/boot/grub2/grub.cfg`` en algunes distribucions).
-- `/etc/default/grub` : Opcions generals de configuració i variables d’entorn.
-- `/etc/grub.d/` Directori amb scripts que generen grub.cfg:
+- Fitxer principal de configuració: `/boot/grub/grub.cfg` (o `/boot/grub2/grub.cfg` en algunes distribucions).  
+- `/etc/default/grub` : Opcions generals de configuració i variables d’entorn.  
+- `/etc/grub.d/` : Directori amb scripts que generen `grub.cfg`.  
 
-Un cop modificats els fitxers necessaris, cal regenerar `grub.cfg`
+Un cop modificats els fitxers necessaris, cal regenerar `grub.cfg`.
 
 ### Variables `/etc/default/grub`
 
@@ -113,7 +113,6 @@ A continuació es mostren uns exemples d'eines de l'initramfs:
 - **/usr/share/initramfs-tools/**  
   Scripts i fitxers estàndard utilitzats per `initramfs-tools`, normalment no modificats.
 
-
 ### Quan regenerar l'initramfs?
 - **Actualització del nucli**  
   Quan es compila o instal·la un nou kernel, l’initramfs associat ha de ser regenerat per garantir que carrega correctament els mòduls i el maquinari necessari.  
@@ -128,9 +127,11 @@ A continuació es mostren uns exemples d'eines de l'initramfs:
   Si es canvien components de xarxa que s’utilitzen en el procés d’arrencada (per exemple, arrencada `PXE`).
 
 ## Exemples pràctics
-- *(No s’han registrat exemples per aquesta setmana.)*  
+- Arrencar Linux des d’un disc extern amb particions RAID.  
+- Configurar l’initramfs per carregar mòduls de xifrat específics en un servidor segur.  
 
 ## Dubtes, preguntes i aspectes interessants
 - Què és dracut? (Dracut és una eina Linux per generar initramfs de manera modular, creant un entorn mínim amb els mòduls necessaris per iniciar el sistema i suportant RAID, LVM i discos xifrats.)
-## Reflexió personal
 
+## Reflexió personal
+He après com el procés d’arrencada depèn de molts elements i que initramfs és essencial per garantir que el sistema s’inicia de manera correcta i segura.

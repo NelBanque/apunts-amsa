@@ -56,7 +56,7 @@ Concatena diversos discos en un sol espai d’emmagatzematge.
 Divideix les dades en blocs i les distribueix entre diversos discos.
 > Millora el rendiment però si falla un disc es perd tota la informació.
 
-![RAID 0](striping.png)
+![RAID 0](raid0.png)
 
 ---
 
@@ -64,7 +64,7 @@ Divideix les dades en blocs i les distribueix entre diversos discos.
 Duplica les dades exactament en dos discos (o més).
 > Alta seguretat, però només s’aprofita el 50% de la capacitat total.
 
-![RAID 1](mirror.png)
+![RAID 1](raid1.png)
 
 ---
 
